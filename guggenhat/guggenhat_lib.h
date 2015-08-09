@@ -1,0 +1,8 @@
+//
+// Created by Olivier Van Acker on 08/08/15.
+//
+
+#ifndef ARDUINOEXAMPLE_GUGGENHAT_LIB_H
+#define ARDUINOEXAMPLE_GUGGENHAT_LIB_H
+
+#endif //ARDUINOEXAMPLE_GUGGENHAT_LIB_H

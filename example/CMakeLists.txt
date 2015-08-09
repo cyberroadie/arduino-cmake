@@ -2,8 +2,10 @@
 # can be used. For a detailed explenation of all the options please
 # reade README.rst.
 
-set(ARDUINO_DEFAULT_BOARD diecimila) # Default Board ID, when not specified
-set(ARDUINO_DEFAULT_PORT /dev/ttyUSB0) # Default Port, when not specified
+#set(ARDUINO_DEFAULT_BOARD diecimila) # Default Board ID, when not specified
+#set(ARDUINO_DEFAULT_PORT /dev/ttyUSB0) # Default Port, when not specified
+set(ARDUINO_DEFAULT_BOARD atmega328) # Default Board ID, when not specified
+set(ARDUINO_DEFAULT_PORT /dev/tty.usbserial-A900acNo) # Default Port, when not specified
 
 
 #====================================================================#

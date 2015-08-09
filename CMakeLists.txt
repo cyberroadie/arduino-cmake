@@ -18,3 +18,4 @@ print_board_list()
 print_programmer_list()
 
 add_subdirectory(example)   #add the example directory into build
+add_subdirectory(guggenhat)   #add the example directory into build

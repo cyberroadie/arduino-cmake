@@ -19,4 +19,5 @@ void setup() {
 
 void loop() {
     blink(1000); // Blink for a second
+    digitalWrite(2,2);
 }

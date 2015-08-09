@@ -40,9 +40,9 @@ if(NOT ARDUINO_SDK_PATH)
     set(ARDUINO_PATHS)
 
     foreach(DETECT_VERSION_MAJOR 1)
-        foreach(DETECT_VERSION_MINOR RANGE 5 0)
+        foreach(DETECT_VERSION_MINOR RANGE 9 0)
             list(APPEND ARDUINO_PATHS arduino-${DETECT_VERSION_MAJOR}.${DETECT_VERSION_MINOR})
-            foreach(DETECT_VERSION_PATCH  RANGE 3 0)
+            foreach(DETECT_VERSION_PATCH  RANGE 9 0)
                 list(APPEND ARDUINO_PATHS arduino-${DETECT_VERSION_MAJOR}.${DETECT_VERSION_MINOR}.${DETECT_VERSION_PATCH})
             endforeach()
         endforeach()
@@ -69,7 +69,8 @@ endif()
 find_path(ARDUINO_SDK_PATH
           NAMES lib/version.txt
           PATH_SUFFIXES share/arduino
-                        Arduino.app/Contents/Resources/Java/
+#                        Arduino.app/Contents/Resources/Java/
+                        Arduino.app/Contents/Java/
                         ${ARDUINO_PATHS}
           HINTS ${SDK_PATH_HINTS}
           DOC "Arduino SDK path.")

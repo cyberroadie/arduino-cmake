@@ -1,5 +1,5 @@
-set(ARDUINO_DEFAULT_BOARD atmega328) # Default Board ID, when not specified
-set(ARDUINO_DEFAULT_PORT /dev/tty.usbserial-A900acNo) # Default Port, when not specified
+set(ARDUINO_DEFAULT_BOARD micro) # Default Board ID, when not specified
+set(ARDUINO_DEFAULT_PORT /dev/tty.usbmodem1411) # Default Port, when not specified
 
 generate_arduino_library(adafruit_neopixel_lib
     SRCS adafruit_neopixel/Adafruit_NeoPixel.cpp
@@ -43,6 +43,10 @@ generate_arduino_library(guggenhat_lib
     SRCS guggenhat_lib.cpp
     HDRS guggenhat_lib.h)
 
+generate_arduino_library(SPI_lib
+    SRCS SPI/SPI.cpp
+    HDRS SPI/SPI.h)
+
 generate_arduino_firmware(guggenhat
     SRCS guggenhat.cpp
-    LIBS guggenhat_lib adafruit_neopixel_lib adafruit_neomatrix_lib adafruit_gfx_lib adafruit_ble_uart_lib)
+    LIBS guggenhat_lib adafruit_neopixel_lib adafruit_neomatrix_lib adafruit_gfx_lib adafruit_ble_uart_lib SPI_lib)
